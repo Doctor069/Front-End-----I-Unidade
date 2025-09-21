@@ -35,6 +35,11 @@ body {
   margin-bottom: 20px;
 }
 
+.icon-MOUSE {
+  max-width: 200px;
+  width: 100%;
+}
+
 /* Estilo dos Textos */
 .titulo-not-found {
   font-size: 42px;
@@ -64,4 +69,5 @@ body {
 .botao-retornar:hover {
   background-color: #f0f0f0; /* Cor levemente cinza ao passar o mouse */
   transform: translateY(-2px);
+
 }
