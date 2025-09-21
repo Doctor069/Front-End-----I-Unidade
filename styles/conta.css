@@ -1,0 +1,54 @@
+/* ================================================ */
+/* CSS para a Página de Conta                       */
+/* ================================================ */
+
+/* Estilo do Container Principal */
+#conteudo.conteudo-conta {
+  /* Usa Flexbox para centralizar tudo */
+  display: flex;
+  flex-direction: column; /* Empilha os itens verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center;     /* Centraliza horizontalmente */
+  gap: 25px; /* Cria um espaço entre os elementos */
+  flex: 1; /* Garante que o conteúdo ocupe o espaço vertical disponível */
+}
+
+/* Estilo do Título Principal */
+.titulo-conta {
+  font-size: 48px;
+  font-weight: 900;
+  color: #333;
+  margin-bottom: 10px; /* Espaço extra abaixo do título */
+}
+
+/* Estilo para o Nome do Usuário */
+.nome-usuario {
+  font-size: 24px;
+  color: #555;
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* Estilo dos "Botões" de Ação */
+.alterar-nome-de-usuario,
+.senha {
+  background-color: #6705ac; /* Cor de fundo roxa */
+  color: #fff; /* Cor do texto branca */
+  
+  padding: 12px 25px; /* Espaçamento interno */
+  border-radius: 8px; /* Cantos arredondados */
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito de hover para os botões */
+.alterar-nome-de-usuario:hover,
+.senha:hover {
+  background-color: #560093; /* Cor mais escura ao passar o mouse */
+  transform: translateY(-2px); /* Leve animação de subir */
+}

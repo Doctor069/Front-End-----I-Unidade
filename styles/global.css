@@ -1,0 +1,215 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Regra global para imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Estilo para a Logo no Header */
+.logo {
+  margin-left: auto;
+  height: 50px;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+  display: flex;
+  align-items: center;
+  background: #6705ac;
+  color: #fff;
+  padding: 20px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1100; /* AJUSTADO: Z-index mais alto para garantir que fique sempre no topo */
+}
+
+header h1 {
+  margin-left: 10px;
+  font-size: 30px;
+}
+
+header a.ocutar-barra-lateral {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+header a.ocutar-barra-lateral img {
+  width: 28px;
+  transition: filter 0.3s ease;
+}
+
+header a.ocutar-barra-lateral:hover img {
+  filter: brightness(0.7);
+}
+
+/* ---------------- LATERAL ---------------- */
+#lateral {
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  width: 220px;
+  background: linear-gradient(to bottom right, #6705ac 38%, #1c0024 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+  transition: width 0.4s ease, transform 0.4s ease;
+  overflow: hidden;
+  top: 75px; 
+  z-index: 1000;
+}
+
+#lateral .icones_proximos {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  flex: 1;
+}
+
+#lateral a {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+#lateral img {
+  width: 40px;
+}
+
+#lateral.retraido {
+  width: 90px;
+}
+
+#lateral.retraido a p {
+  display: none;
+}
+
+#lateral a:hover,
+#lateral a.pagina-atual {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------- CONTEÚDO ---------------- */
+#conteudo {
+  margin-left: 240px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  transition: margin-left 0.4s ease;
+  align-items: stretch;
+}
+
+#conteudo.expandido {
+  margin-left: 110px;
+}
+
+/* ---------------- FOOTER ---------------- */
+#lista_redes_sociais {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px;
+  background: linear-gradient(to right, #1c0024 20%, #6705ac 100%);
+  border-radius: 12px 12px 0 0;
+  margin-top: auto;
+}
+
+#lista_redes_sociais img {
+  width: 40px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#lista_redes_sociais a:hover img {
+  filter: brightness(0.8);
+  transform: scale(1.1);
+}
+
+/**************************************************/
+/* REGRAS DE RESPONSIVIDADE ABAIXO */
+/**************************************************/
+
+@media (max-width: 1024px) {
+  #lateral {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    overflow-y: auto;
+    /* padding-top: 75px; <-- REMOVA ESTA LINHA */
+    box-sizing: border-box;
+    z-index: 1050;
+  }
+
+  #lateral.aberta {
+    transform: translateX(0);
+  }
+
+  #conteudo {
+    margin-left: 0;
+    padding-bottom: 80px;
+  }
+  
+  #conteudo.expandido {
+    margin-left: 0;
+  }
+
+  #lista_redes_sociais {
+    position: sticky;
+    bottom: 0;
+    z-index: 1000; /* Z-index menor que a barra lateral e o header */
+  }
+}
+
+/* --- Para Telas Pequenas (Celulares) --- */
+@media (max-width: 768px) {
+  #conteudo {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    padding-bottom: 80px; 
+    gap: 10px;
+  }
+  
+  header h1 {
+    font-size: 20px;
+  }
+}

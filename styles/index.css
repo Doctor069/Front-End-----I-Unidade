@@ -1,0 +1,227 @@
+/* ================================================ */
+/* CSS para a Página de Login                       */
+/* ================================================ */
+
+header, footer {
+    display: none;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      135deg,
+      #6705ac 0%,
+      #1c0024 100%
+    );
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-titulo {
+  font-size: 36px;
+  color: #333333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.login-subtitulo {
+  font-size: 16px;
+  color: #777777;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #6705ac;
+  outline: none;
+}
+
+.input-group input::placeholder {
+  color: #aaaaaa;
+}
+
+.form-opcoes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.lembrar-me {
+  display: flex;
+  align-items: center;
+  color: #555555;
+}
+
+.lembrar-me input[type="checkbox"] {
+  margin-right: 8px;
+  width: auto;
+}
+
+.link-esqueceu-senha {
+  color: #6705ac;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link-esqueceu-senha:hover {
+  color: #560093;
+}
+
+.botao-login {
+  display: block;
+  text-decoration: none; 
+  text-align: center;
+  box-sizing: border-box; 
+
+  width: 100%;
+  padding: 15px;
+  background-color: #6705ac;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 25px;
+}
+
+.botao-login:hover {
+  background-color: #560093;
+  transform: translateY(-2px);
+}
+
+.criar-conta {
+  font-size: 15px;
+  color: #555555;
+}
+
+.link-registro {
+  color: #6705ac;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link-registro:hover {
+  color: #560093;
+}
+
+@media (max-width: 500px) {
+  .login-card {
+    padding: 25px;
+  }
+  .login-titulo {
+    font-size: 28px;
+  }
+  .form-opcoes {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .botao-login {
+    font-size: 16px;
+  }
+}
+
+/* --- AVISO * OBRIGATORIO ---*/
+.botao-login {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  background-color: #6705ac;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 25px;
+}
+
+.botao-login:hover {
+  background-color: #560093;
+  transform: translateY(-2px);
+}
+
+.criar-conta {
+  font-size: 15px;
+  color: #555555;
+}
+
+.link-registro {
+  color: #6705ac;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link-registro:hover {
+  color: #560093;
+}
+
+@media (max-width: 500px) {
+  .login-card {
+    padding: 25px;
+  }
+  .login-titulo {
+    font-size: 28px;
+  }
+  .form-opcoes {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .botao-login {
+    font-size: 16px;
+  }
+}
+
+.label-obrigatorio::after {
+  content: " *"; 
+  color: red;
+  font-weight: bold;
+}

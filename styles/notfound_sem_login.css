@@ -1,0 +1,67 @@
+/* ================================================ */
+/* CSS para a Página "Não Encontrado" / Em Construção */
+/* ================================================ */
+
+/* Layout Geral da Página */
+body {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+  min-height: 100vh; /* Garante que ocupe a altura total da tela */
+  background: linear-gradient(
+      135deg,
+      #6705ac 0%,
+      #1c0024 100%
+    ); /* Mesmo fundo da página de login para consistência */
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilo do Conteúdo Centralizado */
+#conteudo.conteudo-not-found {
+  display: flex;
+  flex-direction: column; /* Empilha os itens verticalmente */
+  align-items: center;     /* Centraliza os itens no container */
+  gap: 20px; /* Cria um espaço entre a imagem, textos e o botão */
+  text-align: center;
+  color: #fff; /* Cor do texto branca para contrastar com o fundo */
+}
+
+/* Estilo da Imagem */
+.img-not-found {
+  max-width: 400px; /* Limita o tamanho da imagem */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Estilo dos Textos */
+.titulo-not-found {
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.subtitulo-not-found {
+  font-size: 18px;
+  max-width: 400px; /* Limita a largura do texto para melhor leitura */
+}
+
+/* Estilo do Botão de Retorno */
+.botao-retornar {
+  /* Fundo branco para contrastar com o background roxo */
+  background-color: #fff;
+  color: #6705ac;
+  
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao-retornar:hover {
+  background-color: #f0f0f0; /* Cor levemente cinza ao passar o mouse */
+  transform: translateY(-2px);
+}

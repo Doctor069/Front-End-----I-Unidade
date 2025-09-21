@@ -1,0 +1,181 @@
+/* ---------- BLOCOS (Estilos Resetados para o novo Grid) ---------- */
+#relogio, #dados_corporal, #bloco-lista-tarefas, #foto_usuario, #bloco-lista-exercicios, #lista_atividades {
+    width: 100%;
+    /* A altura será controlada pela grade (align-items: stretch) */
+}
+
+/* ---------- BLOCO 1 (Relógio) ---------- */
+#relogio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#relogio img {
+  max-width: 80%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ---------- BLOCO 2 (Dados corporais) ---------- */
+#dados_corporal {
+  background: #6705ac;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#dados_corporal img {
+  background: #9e28f3;
+  border-radius: 30%;
+  padding: 6px;
+  width: 90%;
+}
+
+#dados_corporal p {
+  background: #fff;
+  color: #6705ac;
+  font-size: 25px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* ---------- BLOCO 3 (Lista tarefas scroll) ---------- */
+#bloco-lista-tarefas {
+  display: flex; /* Essencial para o layout interno */
+  flex-direction: column; /* Empilha o título e a lista */
+  background: linear-gradient(to bottom, #a62aff, #641999);
+  border-radius: 10px;
+  overflow: hidden; /* Garante que o conteúdo não vaze */
+  color: #fff;
+}
+
+.data_atual {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  /* Ocupa altura automática */
+}
+
+/* CORREÇÃO PRINCIPAL: A div interna vira a área de rolagem */
+#bloco-lista-tarefas .bloco-interno {
+  flex: 1; /* Faz esta div esticar para ocupar o espaço restante */
+  overflow-y: auto; /* Adiciona a barra de rolagem quando necessário */
+  min-height: 0; /* Correção para o flexbox funcionar bem */
+  padding: 10px;
+}
+
+.lista-tarefas li {
+  list-style: none;
+  background: #6705ac;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lista-tarefas li:hover {
+  background: linear-gradient(to right, #6705ac, #2a0246);
+}
+
+.lista-tarefas li.ativo {
+  background: #2a0246;
+}
+
+/* ---------- BLOCO 4 (Foto usuário) ---------- */
+#foto_usuario {
+  background: #560093;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#foto_usuario img {
+  max-height: 95%;
+  object-fit: contain;
+}
+
+/* ---------- BLOCO 5 (Lista exercícios scroll) ---------- */
+#bloco-lista-exercicios {
+  background: linear-gradient(to bottom, #a62aff, #641999);
+  border-radius: 10px;
+  display: flex; /* Essencial para o layout interno */
+  flex-direction: column; /* Empilha o título (se houver) e a lista */
+  overflow: hidden; /* Garante que o conteúdo não vaze */
+}
+
+/* CORREÇÃO PRINCIPAL: A div interna vira a área de rolagem */
+#bloco-lista-exercicios .bloco-interno {
+  flex: 1; /* Faz esta div esticar para ocupar o espaço restante */
+  overflow-y: auto; /* Adiciona a barra de rolagem quando necessário */
+  min-height: 0; /* Correção para o flexbox funcionar bem */ 
+  padding: 10px;
+}
+
+.lista-exercicios li {
+  list-style: none;
+  background: #6705ac;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lista-exercicios li:hover {
+  background: linear-gradient(to right, #6705ac, #2a0246);
+}
+
+.lista-exercicios li.ativo {
+  background: #2a0246;
+}
+
+/* ---------- BLOCO 6 (Lista atividades) ---------- */
+#lista_atividades {
+  background: linear-gradient(to bottom, #a62aff, #641999);
+  border-radius: 10px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px; 
+  place-items: center;
+}
+
+#lista_atividades img {
+  width: 35px; 
+}
+
+#lista_atividades .atividade {
+  background-color: #fff;
+  width: 65px; 
+  height: 65px;
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#lista_atividades .atividade:hover {
+  background-color: #c8a2c8;
+  transform: scale(1.1);
+}
+
+#lista_atividades .atividade.ativo {
+  background-color: #2a0246;
+}

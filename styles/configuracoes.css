@@ -1,0 +1,39 @@
+/* ================================================ */
+/* CSS para a Página de Configurações               */
+/* ================================================ */
+
+/* Estilo do Container Principal */
+#conteudo.conteudo-config {
+  /* Usa Flexbox para centralizar tudo */
+  display: flex;
+  flex-direction: column; /* Empilha os itens verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center;     /* Centraliza horizontalmente */
+  gap: 40px; /* Cria um espaço entre o título e o botão */
+  flex: 1; /* Garante que o conteúdo ocupe o espaço vertical disponível */
+}
+
+/* Estilo do Título */
+.titulo-config {
+  font-size: 48px;
+  font-weight: 900;
+  color: #333;
+}
+
+/* Estilo do Botão "Deslogar" */
+.botao-deslogar {
+  background-color: #6705ac; /* Cor de fundo roxa */
+  color: #fff; /* Cor do texto branca */
+  
+  padding: 15px 40px; /* Espaçamento interno para dar tamanho ao botão */
+  border-radius: 10px; /* Cantos arredondados */
+  text-decoration: none; /* Remove o sublinhado do link */
+  font-size: 20px;
+  font-weight: bold;
+  
+  transition: background-color 0.3s ease; /* Efeito suave na troca de cor */
+}
+
+.botao-deslogar:hover {
+  background-color: #560093; /* Cor um pouco mais escura ao passar o mouse */
+}

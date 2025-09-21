@@ -1,0 +1,118 @@
+/* ================================================ */
+/* CSS para Páginas de Lista (Alimentação, Exercícios, etc.) */
+/* ================================================ */
+
+/* Define o container do conteúdo como flex para organizar a navegação e o bloco */
+#conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 0; 
+}
+
+/* ---------------- Abas de Navegação (Lógica Refatorada) ---------------- */
+#navegacao {
+  display: flex;
+}
+
+/* 1. ESTILO PADRÃO (INATIVO) PARA TODAS AS ABAS */
+#navegacao a {
+  padding: 15px 40px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px 10px 0 0;
+  transition: background-color 0.3s ease;
+  background-color: rgba(103, 5, 172, 0.5); /* Cor de aba inativa */
+}
+
+/* 2. ESTILOS DA PÁGINA DE ALIMENTAÇÃO */
+body.pagina-alimentacao #navegacao a.alimentacao {
+  background-color: #6705AC; /* Deixa a aba 'Alimentação' ATIVA */
+}
+body.pagina-alimentacao #bloco-lista-do-usuario {
+  border-radius: 0 10px 10px 10px; /* Ajusta o canto para a aba ativa (direita) */
+}
+
+/* 3. ESTILOS DA PÁGINA DE EXERCÍCIOS */
+body.pagina-exercicios #navegacao a.exercicios {
+  background-color: #6705AC; /* Deixa a aba 'Exercício' ATIVA */
+}
+body.pagina-exercicios #bloco-lista-do-usuario {
+  border-radius: 0 10px 10px 10px; /* Ajusta o canto para a aba ativa (esquerda) */
+}
+
+
+/* ---------------- Bloco Principal da Lista ---------------- */
+#bloco-lista-do-usuario {
+  background: #560093;
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------- A Lista com Rolagem ---------------- */
+.lista-do-usuario {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+/* Estilizando a barra de rolagem (opcional) */
+.lista-do-usuario::-webkit-scrollbar {
+  width: 8px;
+}
+.lista-do-usuario::-webkit-scrollbar-track {
+  background: #4a148c;
+  border-radius: 10px;
+}
+.lista-do-usuario::-webkit-scrollbar-thumb {
+  background-color: #9E28F3;
+  border-radius: 10px;
+}
+
+/* ---------------- Itens da Lista e Interatividade ---------------- */
+.lista-do-usuario li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 22px;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  background: #6705AC;
+  transition: background 0.3s ease;
+}
+
+.lista-do-usuario .item-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.lista-do-usuario li:hover {
+  background: linear-gradient(to right, #6705ac, #2a0246);
+}
+
+.lista-do-usuario li.ativo {
+  background: #2A0246;
+}
+
+.lista-do-usuario li .ponto {
+  font-size: 30px;
+  line-height: 0;
+}
+
+.lista-do-usuario li .horario {
+  font-weight: bold;
+}

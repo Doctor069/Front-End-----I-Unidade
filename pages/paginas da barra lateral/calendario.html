@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="../../styles/calendario.css" />
+
+    <link rel="icon" href="../../assets/tab/icon - tab.jpg" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="../../script/index.js" defer></script>
+    <title>Calendário</title>
+  </head>
+  <body>
+    <header id="header">
+      <a href="../home.html" class="ocutar-barra-lateral">
+        <img src="../../assets/header/icon - tres linhas.png" alt="Menu" />
+      </a>
+      <h1 class="bem_vindo">Olá, Nicolas Cleik</h1>
+      <a href="/pages/home.html" class="logo">
+        <img
+          src="../../assets/logo/icon - logo --- SEM FUNDO.png"
+          alt="Logo do Site"
+        />
+      </a>
+    </header>
+
+    <div id="lateral" class="oculto">
+      <div class="icones_proximos">
+        <a href="../paginas da barra lateral/conta.html" class="oculto">
+          <img src="../../assets/barra lateral/icon - conta.png" alt="Conta"/>
+          <p>Conta</p>
+        </a>
+        <a href="../home.html" class="oculto">
+          <img src="../../assets/barra lateral/icon - home.png" alt="Home" />
+          <p>Home</p>
+        </a>
+        <a href="../pagina da lista do usuario/exercicios.html" class="oculto">
+          <img
+            src="../../assets/barra lateral/icon - to-do.png"
+            alt=""
+            class="oculto"
+          />
+          <p>Diário</p>
+        </a>
+        <a href="./calendario.html" class="oculto pagina-atual">
+          <img src="../../assets/barra lateral/icon - calendario.png" alt="Calendário"/>
+          <p>Calendario</p>
+        </a>
+      </div>
+      <a href="./configuracoes.html" class="oculto">
+        <img src="../../assets/barra lateral/icon - engrenagem.png" alt="Configurações"/>
+        <p>Configurações</p>
+      </a>
+    </div>
+
+    <div id="conteudo" class="conteudo-calendario">
+      
+      <aside class="metas-container">
+        <h2 class="ano-titulo">2025</h2>
+        <div class="meta-bloco">
+            <h3 class="meta-titulo">LISTA</h3>
+            <ul class="meta-lista">
+                <li>
+                    <strong>Dia 29</strong>
+                    <ul>
+                        <li>Iniciar a revisões dos cursos até o dia 05/10 --- 6 dias de revisão (até onde foi pausado no curso)</li>
+                        <li>Sobre a revisão
+                            <ul>
+                                <li>Python
+                                    <ul>
+                                        <li>Rever todas as aulas e anotações</li>
+                                        <li>Refazer todos os desafios maiores</li>
+                                    </ul>
+                                </li>
+                                <li>JavaScript
+                                    <ul>
+                                        <li>Além das revisões, fazer as atividades puladas</li>
+                                        <li>Rever a parte de js, das declarações</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+      </aside>
+
+      <main class="calendario-container">
+        <div class="calendario-header">
+            <h2 class="mes-titulo">SETEMBRO</h2>
+        </div>
+        
+        <div class="dias-semana">
+            <div>DOM</div>
+            <div>SEG</div>
+            <div>TER</div>
+            <div>QUA</div>
+            <div>QUI</div>
+            <div>SEX</div>
+            <div>SAB</div>
+        </div>
+
+        <div class="calendario-grid">
+            <div class="dia-vazio"></div>
+            <div class="dia"><span class="numero-dia">01</span></div>
+            <div class="dia"><span class="numero-dia">02</span></div>
+            <div class="dia"><span class="numero-dia">03</span></div>
+            <div class="dia"><span class="numero-dia">04</span></div>
+            <div class="dia"><span class="numero-dia">05</span></div>
+            <div class="dia"><span class="numero-dia">06</span></div>
+            <div class="dia"><span class="numero-dia">07</span></div>
+            <div class="dia"><span class="numero-dia">08</span></div>
+            <div class="dia"><span class="numero-dia">09</span></div>
+            <div class="dia"><span class="numero-dia">10</span></div>
+            <div class="dia"><span class="numero-dia">11</span></div>
+            <div class="dia"><span class="numero-dia">12</span></div>
+            <div class="dia"><span class="numero-dia">13</span></div>
+            <div class="dia"><span class="numero-dia">14</span></div>
+            <div class="dia"><span class="numero-dia">15</span></div>
+            <div class="dia"><span class="numero-dia">16</span></div>
+            <div class="dia"><span class="numero-dia">17</span></div>
+            <div class="dia"><span class="numero-dia">18</span></div>
+            <div class="dia"><span class="numero-dia">19</span></div>
+            <div class="dia"><span class="numero-dia">20</span></div>
+            <div class="dia"><span class="numero-dia">21</span></div>
+            <div class="dia"><span class="numero-dia">22</span></div>
+            <div class="dia"><span class="numero-dia">23</span></div>
+            <div class="dia"><span class="numero-dia">24</span></div>
+            <div class="dia"><span class="numero-dia">25</span></div>
+            <div class="dia"><span class="numero-dia">26</span></div>
+            <div class="dia"><span class="numero-dia">27</span></div>
+            <div class="dia"><span class="numero-dia">28</span></div>
+            <div class="dia com-conteudo tipo-a">
+                <span class="numero-dia">29</span>
+                <ul class="dia-lista">
+                    <li>Curso de python</li>
+                    <li>Curso de JS</li>
+                    <li>Curso de data base</li>
+                    <li>Postagens LINKEDIN</li>
+                </ul>
+            </div>
+            <div class="dia com-conteudo tipo-b">
+                <span class="numero-dia">30</span>
+                <ul class="dia-lista">
+                    <li>Anotações</li>
+                    <li>Redes</li>
+                    <li>Cloud</li>
+                    <li>Engenharia</li>
+                </ul>
+            </div>
+        </div>
+      </main>
+
+    </div>
+
+    <footer id="lista_redes_sociais">
+      <a href="https://www.facebook.com/?locale=pt_BR" target="_blank" class="rede_social">
+        <img src="../../assets/footer/icon - facebook.png" alt="" />
+      </a>
+      <a href="https://www.instagram.com/nicolas_cleik/" target="_blank" class="rede_social">
+        <img src="../../assets/footer/icon - instagram.png" alt="" />
+      </a>
+      <a href="https://x.com/" class="rede_social">
+        <img src="../../assets/footer/icon - twitter.png" alt="" />
+      </a>
+      <a href="http://www.linkedin.com/in/nicolascleik" target="_blank" class="rede_social">
+        <img src="../../assets/footer/icon - linkedin.png" alt="" />
+      </a>
+    </footer>
+  </body>
+</html>

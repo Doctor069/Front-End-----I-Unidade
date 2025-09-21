@@ -1,0 +1,146 @@
+#conteudo.conteudo-calendario {
+  display: flex;
+  flex: 1;
+  gap: 40px; 
+  padding: 40px;
+  align-items: flex-start;
+  background-color: #FDFCFB; 
+}
+
+/* ---------------- Coluna da Esquerda ---------------- */
+.metas-container {
+  flex-basis: 40%;
+  color: #333;
+}
+
+.ano-titulo {
+  font-size: 80px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.meta-titulo {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.meta-lista, .meta-lista ul {
+  list-style-position: inside;
+  padding-left: 20px;
+}
+.meta-lista > li {
+  list-style-type: none;
+  padding-left: 0;
+}
+.meta-lista ul {
+    margin-top: 10px;
+}
+.meta-lista ul ul {
+    list-style-type: circle;
+}
+
+/* ---------------- Coluna da Direita ---------------- */
+.calendario-container {
+  flex-basis: 60%;
+}
+
+.calendario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mes-titulo {
+  font-size: 48px;
+  font-weight: 900;
+  color: #111;
+}
+
+.calendario-header span {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #555;
+}
+
+/* Cabeçalho com os dias da semana */
+.dias-semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Grade do calendário */
+.calendario-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  background-color: #EAEAEA;
+  border: 2px solid #EAEAEA;
+}
+
+.dia, .dia-vazio {
+  background-color: #fff;
+  min-height: 120px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.numero-dia {
+  font-weight: 700;
+}
+
+/* Estilo para dias com conteúdo */
+.dia.com-conteudo {
+  color: #333;
+}
+
+.dia.tipo-a {
+    background-color: #E3E9FF;
+}
+.dia.tipo-b {
+    background-color: #FFE3E3;
+}
+
+.dia-lista {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.dia-lista li {
+    margin-bottom: 4px;
+}
+
+/**************************************************/
+/* AJUSTE DE RESPONSIVIDADE ADICIONADO ABAIXO     */
+/**************************************************/
+
+@media (max-width: 992px) {
+  #conteudo.conteudo-calendario {
+    flex-direction: column; /* Empilha as colunas verticalmente */
+    padding: 20px; /* Diminui o padding em telas menores */
+    gap: 30px;
+  }
+
+  /* Faz com que ambas as colunas ocupem 100% da largura */
+  .metas-container,
+  .calendario-container {
+    flex-basis: 100%;
+  }
+
+  .ano-titulo {
+    font-size: 60px;
+  }
+
+  .mes-titulo {
+    font-size: 36px;
+  }
+}
